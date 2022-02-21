@@ -1,0 +1,1467 @@
+/*
+     
+
+    font-family: 'EB Garamond', serif;
+
+    font-family: 'Merriweather', serif;
+
+    font-family: 'Open Sans Condensed', sans-serif;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-family: 'Tangerine', cursive;
+
+    font-family: 'Twinkle Star', cursive;
+       font-family: 'Caveat', cursive;
+       font-family: 'Neonderthaw', cursive;
+*/
+/* colors
+    background: rgb(10,231,77);
+    background: linear-gradient(94deg, rgba(10,231,77,1) 0%, rgba(5,191,229,1) 100%); 
+
+    2.
+     background: rgb(210,214,211);
+    background: linear-gradient(94deg, rgba(210,214,211,1) 0%, rgba(255,255,255,1) 50%, rgba(211,216,213,0.9856675946745885) 100%); 
+
+    3.
+    background: rgb(22,208,223);
+    background: linear-gradient(94deg, rgba(22,208,223,1) 0%, rgba(17,232,112,1) 100%);
+
+    4.
+     background: rgb(115,231,160);
+    background: radial-gradient(circle, rgba(115,231,160,1) 0%, rgba(255,255,255,1) 100%); 
+
+    5.
+    background: rgb(89,202,211);
+    background: radial-gradient(circle, rgba(89,202,211,1) 0%, rgba(255,255,255,1) 100%); 
+
+    6.
+    background: rgb(217,131,74);
+    background: linear-gradient(90deg, rgba(217,131,74,1) 0%, rgba(60,215,212,1) 100%); 
+    7.
+     background: rgb(171,164,220);
+    background: radial-gradient(circle, rgba(171,164,220,1) 2%, rgba(220,220,220,1) 100%); 
+    8.
+     background: rgb(220,164,164);
+background: radial-gradient(circle, rgba(220,164,164,1) 2%, rgba(220,220,220,1) 100%); 
+
+    hsla(240, 100%, 15%,.8);
+*/
+
+nav{
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+    margin: 1rem;
+    margin-left: 2rem;
+}
+.navb{
+    border-bottom: 1.7px solid rgb(170, 159, 159);
+    border-radius: 1rem;
+    transition: all .4s linear;
+    background: hsla(0, 0%, 89%,0.9);
+    box-shadow: 4px 4px 8px hsl(0, 0%, 70%);
+    margin: 0;
+    padding-left: 1.5rem;
+}
+nav .ul{
+    display: flex;
+}
+nav .logo-name{
+    text-align: left;  
+}
+nav .logo-name a{
+    display: flex;
+    align-items: baseline;    
+    color: rgb(61, 58, 58);
+}
+nav .logo-name a .s{
+    font-family: 'Neonderthaw', cursive;
+    font-weight: 900;
+    font-size: 3rem;
+}
+nav .logo-name a .ourav{
+    font-size: 2.5rem;
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    color: transparent;
+}
+.logo-name a .ourav::after{
+   content: "ourav";
+   position: absolute;
+   background-color:transparent;
+   top: 0;
+   right: -7px;
+   height: 100%;
+   width: 114%;
+   transform: translateX(100%);
+   animation: name 7s linear infinite;
+   color: black;
+}
+@keyframes name {
+    0%{
+        transform: translateX(100%);
+    }
+    20%{
+        transform: translateX(50%);
+    }
+    40%{
+        transform: translateX(0%);
+    }
+    50%{
+      transform: translate(0%);
+    }
+    60%{
+        transform: translateY(0%);
+    }
+    80%{
+        transform: translateY(-50%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+@-webkit-keyframes name {
+    0%{
+        transform: translateX(100%);
+    }
+    20%{
+        transform: translateX(50%);
+    }
+    40%{
+        transform: translateX(0%);
+    }
+    50%{
+      transform: translate(0%);
+    }
+    60%{
+        transform: translateY(0%);
+    }
+    80%{
+        transform: translateY(-50%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+nav .ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-bottom: 0;
+}
+nav .ul .active{
+    background-color: rgba(80, 76, 80, 0.54);
+    color: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .ul a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.1rem;
+    border: 2px solid rgb(107, 103, 103);
+    width: 19%;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+    z-index: 2;
+}
+
+nav .ul a::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(46, 43, 46, 0.51);
+    border-radius: 14px;
+    transition: all 0.3s linear;
+    transform: translateY(100%);
+    z-index: -1;
+}
+nav .ul a:hover::after{
+    transform: translateY(0%);
+    
+}
+nav .ul a:hover{
+    color: white;
+}
+.active{
+    background-color: rgba(41, 38, 41, 0.61);
+    color: white;
+    height: 97%;
+    width: 98%;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn{
+    display: none;
+}
+.hidebx{
+    display: none;
+}
+.close-nav{
+    display: none;
+}
+/*home*/
+.home-sec{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(115,231,160);
+    background: radial-gradient(circle, rgba(115,231,160,1) 0%, rgba(255,255,255,1) 100%);
+}
+.home-sec .image{
+    width: 40%;
+    height: auto;
+    margin-top: 4rem;
+}
+.image .clip{
+    width: 70%;
+    position: relative;
+}
+
+.clip img{
+    width: 95%;
+    height: 27rem;
+}
+.clip img:hover{
+    transform: rotate3d(10deg);
+}
+.intro{
+   margin-top: 3.5rem;
+   margin-right: 3.4rem;
+}
+.intro h1{
+    font-family: 'Caveat', cursive;
+    color: hsl(0, 0%,30%);
+    font-weight: 600;
+}
+.intro h2{
+    font-family: 'Quicksand', sans-serif;
+    color: hsl(0, 0%,23%);
+}
+.intro p{
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(56, 55, 55);
+    font-size: 1.3rem;
+}
+
+.contactme{
+    height: 3rem;
+    width: 11rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.15rem;
+    background-color: rgb(75, 74, 74);
+    color: white;
+    margin-top: 2rem;
+    box-shadow: 3px 10px 20px rgb(56, 56, 56);
+    transition: all .3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ 
+}
+.intro a{
+    text-decoration: none;
+}
+.contactme:hover{
+   
+}
+.contactme:hover .fas:last-child{
+    transform: translateX(-80%);
+}
+.contactme:hover .fas:first-child{
+    transform: translateX(80%);
+}
+.contactme:focus .fas:last-child{
+    transform: translateX(-80%);
+}
+.contactme:focus .fas:first-child{
+    transform: translateX(80%);
+}
+.contactme .fas{
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: all .3s linear;
+    color: rgb(216, 212, 212);
+}
+/*about*/
+.about-sec{
+    height: 100vh;
+    width: 100%;
+    background: rgb(220,214,164);
+    background: radial-gradient(circle, rgba(220,214,164,1) 2%, rgba(220,220,220,1) 100%); 
+    padding-top: 7rem;
+}
+.about-sec h1{
+    margin-top: 3rem;
+    font-size: 2.4rem;
+    margin-left: 7rem;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+    position: relative;
+    width: 9rem;
+    text-align: right;
+}
+.about-sec h1 i{
+    font-size: 1.43rem;
+    margin-right: 1rem;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    transition: all .3s;
+    animation: about 5s linear infinite;
+}
+@keyframes about {
+    0%{
+        color: #000;
+    }
+    40%{
+        color: rgb(25, 192, 89);
+    }
+    60%{
+        color: rgb(23, 185, 85);
+    }
+    100%{
+        color: #000;
+    }
+}
+.about-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.about-details img{
+    height: 13rem;
+    margin-top: -1.2rem;
+    border-radius: 55%;
+}
+.about-details .about-texts{
+    margin-top: 2rem;
+    width: 80%;
+    text-align: center;
+}
+.about-texts p:first-child{
+    font-size: 1.27rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    color: rgb(72, 72, 77);
+}
+.about-texts p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.15rem;
+}
+/*about*/
+
+
+/*portfolio*/
+
+
+.portfolio-sec{
+    background: rgb(89,202,211);
+    background: radial-gradient(circle, rgba(89,202,211,1) 0%, rgba(255,255,255,1) 100%);  
+    height: 100vh;
+    width: 100%;
+    padding-top: 7rem;
+}
+
+.media-links{
+    position: fixed;
+    top: 37%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 3.64rem;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.66rem;
+}
+.media-links a{
+   width: 80%;
+}
+.media-links div{
+   width: 61%;
+   transition: all .4s linear;
+   animation: icon 4.5s linear infinite 5s;
+}
+
+.portfolio-sec h1{
+    font-size: 2.4rem;
+    margin-left: 3rem;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+.texts h1 i{
+    font-size: 1.5rem;
+    animation: port 4s linear infinite;
+    transition: all .3s;
+    color: #fc4e09;
+}
+@keyframes port {
+   0%{
+       transform: translate(100%,-100%);
+       color: #d65421;
+   }  
+   15%{
+       transform: translate(50%,-50%);
+       color: #94573f;
+   }
+   30%{
+       transform: translate(10%,-10%);
+       color: #ff4901;
+   }
+   70%{
+       transform: translate(10%,-10%);
+       color: #ff4901;
+   }
+   85%{
+       transform: translate(-50%,50%);
+       color: #94573f;
+   }
+   100%{
+       transform: translate(-100%,100%);
+       color: #d65421;
+   }
+
+}
+.portfolio-sec p{
+    margin-left: 6rem;
+    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+}
+.websites{
+    margin-left: 2rem;
+    margin-right: 2.6rem;
+    display: flex;
+    margin-top: 3.4rem;
+}
+.websites .demo-site{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: .7rem;
+}
+.demo-site .site-image{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.demo-site .site-image img{
+    width: 95%;
+    height: 10rem;
+    margin-top: 1.5rem;
+    border: 1.4px solid rgb(75, 67, 67);
+}
+
+.visit{
+    position: absolute;
+    text-decoration: none;
+    color: rgb(236, 232, 232);
+    height: 2.5rem;
+    width: 100%;
+    display: block;
+    z-index: 2;
+    bottom: 0;
+    background-color: hsla(240, 9%, 13%,.8);
+    padding-top: .4rem;
+    text-align: center;
+    transition: all 0.3s;
+    transform: translateY(100%);
+}
+.visit:hover{
+    color: rgb(236, 232, 232);
+}
+.site-image:hover > .visit{
+    transform: translateY(0);
+}
+
+.demo-site .site-image .mobile{
+    display: none;
+    width: 50%;
+}
+
+.site-image:hover > .pc{
+    border: 2.5px dotted rgb(51, 44, 44);
+    transition: all .4s;
+    transform: translateY(-5px);
+}
+.site-image:hover > .mobile{
+    border: 2.5px dotted rgb(51, 44, 44);
+    transition: all .4s;
+    transform: translateY(-5px);
+}
+
+.demo-site p{
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    color: rgb(78, 78, 78);
+}
+.select-screen{
+    display: flex;
+    width: 95%;
+}
+.select-screen input{
+    display: none;
+}
+.select-screen label{
+   width: 50%;
+   text-align: center;
+   border: 1px solid#000;
+   height: 2rem;
+   margin-top: .4rem;
+}
+
+.active1{
+    background-color: rgb(71, 68, 68);
+    color: white;
+}
+
+
+@keyframes icon {
+    0%{
+        transform:scale(1);
+    }
+    15%{
+        transform: scale(1.25);
+    }
+    30%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(1);
+    }
+    
+}
+
+/*contact*/
+
+
+.contact-sec{
+    height: 100vh;
+    width: 100%;
+    background: rgb(187,220,164);
+    background: radial-gradient(circle, rgba(187,220,164,1) 2%, rgba(220,220,220,1) 100%); 
+    padding-top: 7rem;
+    overflow: hidden;
+}
+.contact-sec h1 i{
+    font-size: 1.75rem;
+    animation: contact 3s linear infinite;
+}
+@keyframes contact {
+    0%{
+        transform: rotate(45deg);
+    }
+    20%{
+        transform: rotate(45deg);
+    }
+    40%{
+        transform: rotate(90deg);
+    }
+    60%{
+        transform: rotate(90deg);
+    }
+    80%{
+        transform: rotate(135deg);
+    }
+    100%{
+        transform: rotate(135deg);
+    }
+}
+
+.contact-sec .details{
+    width: 100%;
+    display: flex;
+    height: 80%;
+}
+ .contact-sec h1{
+    font-size: 2.2rem;
+    margin-left: 3rem;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+.contact-sec .address{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.address > p{
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-bottom: 1.5px dotted rgb(59, 57, 57);
+    color: rgb(53, 49, 49);
+}
+.address .c-info{
+    font-family: 'Quicksand', sans-serif;
+    line-height: 2.7rem;
+    border-right: 2px dotted #000;
+    padding-right: 2rem;
+}
+.c-info p{
+    display: flex;
+}
+.c-info .p-mail{
+    display: flex;
+}
+.c-info p span{
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #a70909;
+    width: 5.5rem;
+}
+.c-info p i{
+    font-size: 1.1rem;
+    border: 1px solid;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background-color: rgba(173, 228, 200, 0.8);
+    display: grid;
+    place-items: center;
+    margin-right: 1rem;
+    margin-top: 3px;
+}
+.c-info .d-mail{
+    border: 1px solid #000;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 3px;
+    margin-right: 1rem;
+    overflow: hidden;
+    background-color: rgba(173, 228, 200, 0.8);
+}
+.c-info .mail{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    position: absolute;
+    margin-right: 1rem;
+    top: -1px;
+    left: 3px;
+    animation: mailbox 9s linear infinite;
+    transform: translateY(0%);
+}
+.c-info .d-mail .mail i{
+    border: none;
+    background-color: transparent;
+    height: 2rem;
+    width: 2rem;
+    transition: all 0.3s;
+}
+@keyframes mailbox {
+    0%{
+        transform: translateY(0%);
+    }
+    24%{
+        transform: translateY(0%);
+    }
+    39%{
+        transform: translateY(-34%);
+    }
+    63%{
+        transform: translateY(-34%);
+    }
+    78%{
+        transform: translateY(-67%);
+    }
+    100%{
+        transform: translateY(-67%);
+    }
+}
+.fa-phone{
+    animation: phone 3.5s linear infinite;
+}
+@keyframes phone {
+    0%{
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(14deg);
+    }
+    60%{
+        transform: rotate(-14deg);
+    }
+    80%{
+        transform: rotate(14deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.contact-form{
+    width: 50%;
+    margin-top: 2.2rem;
+    padding-left: 2rem;
+}
+.contact-form p{
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    margin-bottom: .4rem;
+    color: rgb(51, 46, 46);
+}
+.contact-form .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2rem;
+}
+.form .input-f{
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+}
+.media-links div:first-child{
+    animation-delay: 0s;
+}
+.media-links div:nth-child(2){
+    animation-delay: 1.5s;
+}
+.media-links div:last-child{
+    animation-delay: 2.8s;
+}
+.media-links .github a img{
+    border-radius: 1.2rem;
+}
+.media-links a img{
+    height: auto;
+    width: 100%;
+}
+.input-f label{
+    text-align: left;
+    margin-right: 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #a70909;
+    width: 5.5rem;
+}
+.form .input-f .textarea{
+    height: 6.5rem;
+    text-align: start;
+  }
+.input-f input{
+    width: 75.5%;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: hsla(0, 3%, 13%, .03);
+    color: black;
+    font-size: 1rem;
+    border-radius: 9px;
+    border-bottom: 3px solid hsla(240, 47%, 27%, 0.9);
+    border-left: 1.8px solid rgb(12, 82, 104);
+    padding-left: 1rem;
+    transition: all 0.3s linear;
+}
+
+.input-f input:focus{
+    border-bottom: 3px solid hsla(286, 87%, 47%, 0.9);
+    border-left: 1.8px solid rgb(141, 78, 6);
+}
+
+.input-f textarea{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: hsla(0, 3%, 13%, .03);
+    color: black;
+    font-size: 1rem;
+    border-radius: 9px;
+    border-bottom: 3px solid hsla(240, 47%, 27%, 0.9);
+    border-left: 1.8px solid rgb(12, 82, 104);
+    padding-left: 1rem;
+    
+}
+.input-f textarea:focus{
+    border-bottom: 3px solid hsla(286, 87%, 47%, 0.9);
+    border-left: 1.8px solid rgb(141, 78, 6);
+}
+.form .submit{
+    width: 9rem;
+    font-size: 1.05rem;
+    margin-top: 1.5rem;
+    background-color: hsla(240, 32%, 22%, 0.9);
+    color: rgb(233, 229, 229);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: 'EB Garamond', serif;
+    height: 2.5rem;
+    box-shadow: 1px 9px 20px hsla(240, 78%, 20%, 0.9);
+    transition: all 0.3s linear;
+}
+.form .submit:hover{
+   transform: scale(1.07);
+}
+.form .submit:focus{
+    transform: scale(1.07);
+}
+@media(min-width:1300px) {
+    nav{
+        height: 6rem;
+    }
+    nav .logo-name{
+        margin-left: 5rem;
+    }
+    nav .logo-name a .s{
+        font-size: 3.2rem;
+    }
+    nav .logo-name a .ourav{
+        font-size: 2.7rem;
+    }
+    .logo-name a .ourav::after{
+        right: -10px;
+    }
+    nav .ul{
+        margin-right: 6rem;
+    }
+    nav .ul a{
+        height: 2.6rem;
+        border-radius: 1.5rem;
+        font-size: 1.14rem;
+        letter-spacing: 1.3px;
+    }
+    nav .ul a::after{
+        border-radius: 1.45rem;
+    }
+    nav .ul .active{
+        border-radius: 1.45rem;
+    }
+    .image .clip{
+        width: 73%;
+    }
+    .intro{
+        line-height: 3.5rem;
+    }
+    .intro h1{
+        font-weight: 600;
+        font-size: 3.5rem;
+    }
+    .intro h2{
+        color: hsl(0, 0%,23%);
+        font-size: 2.3rem;
+    }
+    .intro p{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    .contactme{
+        height: 3.4rem;
+        width: 12.5rem;
+        font-size: 1.3rem;
+    }
+    .media-links{
+        width: 4rem;
+        line-height: 3.7rem;
+    }
+    .home-sec .image{
+        margin: 0;
+    }
+    .media-links div{
+        width: 74%;
+    }
+    .media-links .github a img{
+        border-radius: 1.5rem;
+    }
+
+    /*portfolio*/
+    .texts{
+        height: 20%;
+        margin-left: 5rem;
+        padding-top: 3rem;
+    }
+    .websites{
+        height: 70%;
+        margin-top: 0;
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+    .texts p{
+        font-size: 1.34rem;
+    }
+    .websites .demo-site{
+    }
+    .demo-site .site-image img{
+        height: 11rem;
+    }
+    .visit{
+        height: 3.5rem;
+    }
+    .select-screen label{
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .demo-site p{
+        font-size: 1.4rem;
+    }
+    /*contact*/
+    .contact-sec h1{
+        height: 20%;
+        margin-left: 7.5rem;
+        padding-top: 3rem;
+    }
+    .details .address{
+        justify-content: left;
+        margin-top: 1.4rem;
+    }
+    .address > p{
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    .address .c-info{
+        width: 90%;
+        margin-left: auto;
+    }
+    .c-info p span{
+        font-size: 1.6rem;
+        width: 7rem;
+    }
+    .c-info p{
+        font-size: 1.5rem;
+    }
+    .c-info p i{
+        font-size: 1.3rem;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .c-info .d-mail{
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .c-info .mail{
+        top: 1px;
+        left: 5.5px;
+    }
+    .contact-form{
+        margin-top: 0rem;
+    }
+    .contact-form p{
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+  
+    .input-f label{
+        font-size: 1.6rem;
+        width: 8.2rem;
+        margin-top: .5rem;
+    }
+    .input-f input{
+        width: 64%;
+        line-height: 3.2rem;
+        font-size: 1rem;
+        border-radius: 1rem;
+        height: 3rem;
+    }
+    .input-f textarea{
+        height: 7rem;
+        width: 64%;
+        font-size: 1rem;
+        border-radius: 1rem;
+    }
+    .form .submit{
+        width: 11.5rem;
+        height: 3.7rem;
+        font-size: 1.4rem;
+        margin-top: 1.7rem;
+    }
+    .address .c-info{
+        line-height: 3.6rem;
+    }
+    .c-info p i{
+        margin-top: 6px;
+    }
+    .c-info .d-mail{
+        margin-top: 7px;
+    }
+    .about-sec{
+
+    }
+    
+}
+
+@media(max-width:992px){
+    nav{
+        justify-content: space-evenly;
+    }
+    nav .logo-name a .s{
+        font-size: 2.7rem;
+    }
+    nav .logo-name a .ourav{
+        font-size: 2.1rem;
+    }
+    nav .ul a{
+        width: 20%;
+        font-size: 1rem;
+    }
+    .logo-name a .ourav::after{
+        background-color: transparent;
+    }
+    .home-sec{
+        flex-direction: column;
+        justify-content: left;
+    }
+    .home-sec .image{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        padding-top: 7rem;
+    }
+    .image .clip{
+        width: 45%;
+    }
+    .clip img{
+        height: 24rem;
+    }
+    .home-sec .intro{
+        display: block;
+        margin-top: 3rem;
+        text-align: left;
+    }
+    .intro h1{
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    .intro h2{
+        color: hsl(0, 0%,23%);
+        font-size: 1.6rem;
+    }
+    .intro p{
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+    .contactme{
+        font-size: 1rem;
+    }
+    /*about me*/
+    .about-details img{
+        margin-top: 3rem;
+    }
+    .about-details .about-texts{
+        margin-top: 3.2rem;
+    }
+    /*portfolio*/
+
+    .portfolio-sec .texts{
+        height: 20%;
+        padding-top: 3rem;
+        padding-left: 2rem;
+    }
+    .portfolio-sec .websites{
+        height: 70%;
+        display: grid;
+        grid-template-columns: 20.5rem 22rem;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        margin-top: 0rem;
+        margin-left: 2.6rem;
+    }
+    .websites .demo-site{
+        width: 93%;
+        margin-left: 0;
+        transition: all .3s linear;
+    }
+    .visit{
+        transform: translateY(0);
+    }
+    .demo-site .site-image .mobile{
+        width: 44%;
+    }
+    /*contact*/
+
+    .contact-sec h1{
+        height: 20%;
+        margin-left: 5rem;
+        padding-top: 4rem;
+    }
+    .contact-sec .details{
+        flex-direction: column;
+    }
+    .contact-sec .address{
+        width: 99%;
+    }
+    .contact-form{
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5.4rem;
+    }
+    .contact-form .form{
+        line-height: 2.5rem;
+    }
+    .address .c-info{
+        border: none;
+        border-bottom: 1.5px dotted rgb(63, 60, 60);
+        padding-bottom: 2rem;
+    }
+    .contact-sec .details{
+        height: auto;
+    }
+    .contact-sec h1{
+        height: 16%;
+    }
+    .input-f textarea{
+        width: 75.5%;
+    }
+}
+@media (max-width:768px) {
+    .nav-btn{
+        display: block;
+        cursor: pointer;
+        margin-right: 2rem;
+    }
+    .fa-bars{
+        font-size: 1.3rem;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    nav .logo-name{
+        margin-left: 2rem;
+    }
+    nav .logo-name a .s{
+        font-size: 2.6rem;
+    }
+    nav .logo-name a .ourav{
+        font-size: 2.1rem;
+    }
+    .logo-name a .ourav::after{
+        background-color: transparent;
+        border: none;
+        border-radius: 8px;
+    }
+    nav .ul .active{
+        width: 90%;
+        background-color: rgba(79, 77, 124, 0.8);
+        color: white;
+    }
+    nav .ul{
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        height: 100%;
+        width: 0;
+        right: 0;
+        background-color: hsla(0, 1%, 18%,.95);
+        display: block;
+        text-align: center;
+        transition: all .3s linear;
+    }
+    
+    nav .ul a{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        margin-top: 14px;
+        height: 2.3rem;
+        border: 1.5px solid rgb(230, 213, 213);
+        color: rgba(230, 213, 213,.8);
+        font-size: 1rem
+    }
+    nav .ul a::after{
+        width: 99%;
+        background-color: rgba(79, 77, 124, 0.8);
+    }
+    
+    .close-nav{
+        display: block;
+        text-align: left;
+        padding: 1rem;
+        color: white;
+        cursor: pointer;
+    }
+    .fa-times{
+        font-size: 1.4rem;
+    
+    }
+    .image .clip{
+        width: 60%;
+    }
+    .clip img{
+        height: 12.6rem;
+    }
+    .home-sec .image{
+        margin-top: .7rem;
+    }
+    .home-sec .intro{
+        display: block;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-top: 2rem;
+    }
+    .intro h1{
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+    .intro h2{
+        color: hsl(0, 0%,23%);
+        font-size: 1.35rem;
+    }
+    .intro p{
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    .contactme{
+        font-size: .9rem;
+        height: 2.3rem;
+        width: 10rem;
+    }
+    .media-links{
+        top: 29%;
+    }
+    .media-links div{
+        width: 54%;
+    }
+    .navb{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        border-radius: .6rem;
+    }
+    /*about*/
+    .about-sec{
+        height: 100%;
+    }
+    .about-sec h1{
+        font-size: 1.4rem;
+        margin-left: 1.5rem;
+        padding-top: .6rem;
+        margin-bottom: 1rem;
+        margin-top: 0;
+        text-align: center;
+    }
+    .about-sec h1 i{
+        font-size: .9rem;
+        left: 1.1rem;
+        top: 1rem;
+    }
+    .about-details img{
+        margin-top: .5rem;
+        height: 10.8rem;
+    }
+    .about-details .about-texts{
+        margin-top: 1.7rem;
+        width: 85%;
+        margin-bottom: 2rem;
+    }
+    .about-texts p:first-child{
+        font-size: 1.15rem;
+    }
+    .about-texts p{
+        font-size: 1rem;
+    }
+    /*portfolio*/
+    .portfolio-sec{
+        height: 100%;
+    }
+    .portfolio-sec .websites{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    }
+    .portfolio-sec .texts{
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        padding-top: 0rem;
+    }
+    .portfolio-sec .texts h1{
+        font-size: 1.4rem;
+        margin-left: 0;
+    }
+    .portfolio-sec .texts p{
+        margin-left: 1rem;
+        font-size: .9rem;
+    }
+    .texts h1 i{
+        font-size: .7rem;
+    }
+    .websites .demo-site{
+        width: 19rem;
+        margin-bottom: 1.5rem;
+    }
+    .demo-site p{
+        font-size: 1rem;
+       
+    }
+    .demo-site .site-image img{
+        margin-top: .5rem;
+        height: 11.7rem;
+    }
+    .visit{
+        font-size: .95rem;
+    }
+    .select-screen label{
+        font-size: .9rem;
+        padding-top: .3rem;
+    }
+    /*contact*/
+
+    .contact-sec{
+        overflow: visible;
+        height: auto;
+    }
+    .contact-sec h1{
+        font-size: 1.4rem;
+        margin-left: 0;
+        padding-left: 2rem;
+        padding-top: .6rem;
+        margin-bottom: 2rem;
+    }
+    .contact-sec h1 i{
+        font-size: 1rem;
+    }
+    .contact-sec h1{
+        height: 12%;
+    }
+    .address .c-info{
+        width: 82%;
+    }
+    .address > p{
+        font-size: 1.2rem;
+    }
+    .address .c-info{
+        padding-right: 0px;
+    }
+    .contact-sec .address{
+        font-size: .9rem;
+    }
+    .c-info p span{
+        font-size: .95rem;
+        width: 4rem;
+    }
+    .c-info p i{
+        font-size: 1rem;
+        height: 2rem;
+        width: 2rem;
+        margin-top: 4px;
+        margin-right: .4rem;
+    }
+    .c-info .d-mail{
+        margin-right: .4rem;
+        font-size: 1rem;
+        height: 2.05rem;
+        width: 2.05rem;
+        
+    }
+    .c-info .mail{
+        top: -4px;
+        left: 0px;
+    }
+    .contact-form{
+        margin-top: 2.4rem;
+        padding-left: 1.1rem;
+        padding-right: .9rem;
+    }
+    .contact-form p{
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+    .input-f label{
+        font-size: .95rem;
+        width: 4.6rem;
+    }
+    .contact-form .form{
+        line-height: 1.2rem;
+    }
+    .input-f input{
+        height: 2rem;
+        font-size: .9rem;
+        border-bottom: 2px solid hsla(240, 47%, 27%, 0.9);
+        border-left: 1.4px solid rgb(12, 82, 104);
+    }
+    .input-f input:focus{
+        border-bottom: 2.2px solid hsla(286, 87%, 47%, 0.9);
+        border-left: 1.5px solid rgb(141, 78, 6);
+    }
+    .input-f textarea{
+        height: 5.3rem;
+        font-size: .9rem;
+        border-bottom: 2px solid hsla(240, 47%, 27%, 0.9);
+        border-left: 1.4px solid rgb(12, 82, 104);
+    }
+    .input-f textarea:focus{
+        border-bottom: 2.2px solid hsla(286, 87%, 47%, 0.9);
+        border-left: 1.5px solid rgb(141, 78, 6);
+    }
+    .form .submit{
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+    .media-links{
+        width: 3rem;
+        line-height: 2.2rem;
+    }
+}
+@media (max-width:420px){
+    .websites .demo-site{
+        margin-left: .6rem;
+        margin-bottom: 1.5rem;
+        width: 15rem;
+    }
+    .demo-site .site-image img{
+        height: 10rem;
+    }
+    /*contact*/
+    .address .c-info{
+        width: 99%;
+    }
+}
